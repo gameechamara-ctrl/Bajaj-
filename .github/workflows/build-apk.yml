@@ -1,5 +1,13 @@
 
-name: Build Pulsar Connect APK
+name:       - name: Build APK
+        run: |
+          if [ ! -f gradlew ]; then
+            echo "gradlew සොයාගත නොහැක. Gradle wrapper සකසමින් පවතී..."
+            gradle wrapper
+          fi
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
 
 on:
   workflow_dispatch:
