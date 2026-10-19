@@ -1,13 +1,4 @@
-
-name:       - name: Build APK
-        run: |
-          if [ ! -f gradlew ]; then
-            echo "gradlew සොයාගත නොහැක. Gradle wrapper සකසමින් පවතී..."
-            gradle wrapper
-          fi
-          chmod +x gradlew
-          ./gradlew assembleDebug
-
+name: Build Pulsar Connect APK
 
 on:
   workflow_dispatch:
@@ -35,9 +26,8 @@ jobs:
       - name: Build APK
         run: |
           if [ ! -f gradlew ]; then
-            echo "ERROR: gradlew is missing from the repository root."
-            echo "Android Gradle Wrapper files must be added first."
-            exit 1
+            echo "gradlew සොයාගත නොහැක. Gradle wrapper සකසමින් පවතී..."
+            gradle wrapper
           fi
           chmod +x gradlew
           ./gradlew assembleDebug
