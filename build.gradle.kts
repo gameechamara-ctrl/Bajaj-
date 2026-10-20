@@ -1,12 +1,4 @@
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android") }
-android {
-    namespace = "lk.pulsarconnect.plus"
-    compileSdk = 35
-    defaultConfig {
-        applicationId = "lk.pulsarconnect.plus"
-        minSdk = 26
-        targetSdk = 35
-        versionCode = 2
-        versionName = "0.2-protocol-test"
-    }
+plugins {
+    id("com.android.application") version "8.7.3" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
 }
